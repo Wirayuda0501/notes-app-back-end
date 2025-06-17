@@ -21,6 +21,13 @@ class NotesService {
       values: [id, title, body, tags, createdAt, updatedAt],
     };
 
+    // try {
+    //   const result = await this._pool.query(query);
+    //   console.log('result:', result);
+    // } catch (error) {
+    //   console.error('Error executing query:', error.message);
+    // }
+
     const result = await this._pool.query(query);
 
     if (!result.rows[0].id) {
