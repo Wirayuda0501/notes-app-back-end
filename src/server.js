@@ -90,6 +90,7 @@ const init = async () => {
 
   server.ext('onPreResponse', (request, h) => {
     const { response } = request;
+    // console.log(response);
 
     // penanganan client error secara internal.
     if (response instanceof ClientError) {
