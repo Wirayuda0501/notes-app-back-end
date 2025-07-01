@@ -1,4 +1,7 @@
+require('dotenv').config();
 const amqp = require('amqplib');
+
+console.log('connecting to', process.env.RABBITMQ_SERVER);
 
 const ProdcutService = {
   sendMessage: async (queue, message) => {
